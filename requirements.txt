@@ -26,3 +26,4 @@ matplotlib-inline==0.1.6
 plotly==5.20.0
 pdfminer.six==20231228
 transformers==4.36.2
+openai==1.14.1

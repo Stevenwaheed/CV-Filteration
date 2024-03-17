@@ -19,6 +19,7 @@ import plotly.express as px
 from pdfminer.high_level import extract_text
 # from transformers import pipeline
 from openai import OpenAI
+import os
 # import pyttsx3
 # from streamlit_TTS import auto_play, text_to_audio
 # from tts import TextToSpeech
@@ -27,7 +28,8 @@ from openai import OpenAI
 
 # txt2speech = TextToSpeech()
 
-client = OpenAI(api_key='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')
+
+client = OpenAI(api_key=os.environ['API_KEY'])
 
 nltk.download('stopwords')
 nltk.download('punkt')

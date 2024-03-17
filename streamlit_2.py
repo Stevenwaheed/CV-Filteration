@@ -19,7 +19,7 @@ import plotly.express as px
 from pdfminer.high_level import extract_text
 # from transformers import pipeline
 from openai import OpenAI
-import pyttsx3
+# import pyttsx3
 # from streamlit_TTS import auto_play, text_to_audio
 # from tts import TextToSpeech
 # from transformers import pipeline
@@ -34,7 +34,7 @@ nltk.download('punkt')
 
 
 
-speaker = pyttsx3.init()
+# speaker = pyttsx3.init()
 titles = []
 count_matrix = []
 cos_similarity = []

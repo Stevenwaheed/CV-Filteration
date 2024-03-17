@@ -285,22 +285,22 @@ if clean_keywords != '':
         question = st.text_input('Ask A Question...')
         questions_list.append(question)
 
-    res = ''
-    try:
-        response = client.completions.create(
-            model="gpt-3.5-turbo-instruct",
-            prompt=f'''
-                answer the user question from this context as points and highlight the important information and be direct in your response
-                context: {' '.join(row['cv'].values)}
-                question: {' '.join(questions_list)}
-                don't add extra information just answer the question
-            ''',
-            max_tokens=300,
-            temperature=0
-        )
-        res = response.choices[0].text
-    except:
-        pass
+    # res = ''
+    # try:
+    response = client.completions.create(
+        model="gpt-3.5-turbo-instruct",
+        prompt=f'''
+            answer the user question from this context as points and highlight the important information and be direct in your response
+            context: {' '.join(row['cv'].values)}
+            question: {' '.join(questions_list)}
+            don't add extra information just answer the question
+        ''',
+        max_tokens=300,
+        temperature=0
+    )
+    res = response.choices[0].text
+    # except:
+    #     pass
     
     if st.button('ask'):
         st.write('The answer is: ', res)

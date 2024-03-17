@@ -29,7 +29,7 @@ import os
 # txt2speech = TextToSpeech()
 
 
-client = OpenAI(api_key=os.environ['API_KEY'])
+client = OpenAI(api_key=st.secrets['API_KEY'])
 
 nltk.download('stopwords')
 nltk.download('punkt')

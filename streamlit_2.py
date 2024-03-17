@@ -284,7 +284,8 @@ if clean_keywords != '':
     if Custom:
         question = st.text_input('Ask A Question...')
         questions_list.append(question)
-    
+
+    res = ''
     try:
         response = client.completions.create(
             model="gpt-3.5-turbo-instruct",
@@ -297,11 +298,12 @@ if clean_keywords != '':
             max_tokens=300,
             temperature=0
         )
+        res = response.choices[0].text
     except:
         pass
     
     if st.button('ask'):
-        st.write('The answer is: ', response.choices[0].text)
+        st.write('The answer is: ', res)
         # if st.button('read the answer'):
         #     read_text(response.choices[0].text)
             

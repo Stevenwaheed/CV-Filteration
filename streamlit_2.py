@@ -28,9 +28,9 @@ import os
 
 # txt2speech = TextToSpeech()
 
-print(st.secrets.secrets['API_KEY'])
-st.write(st.secrets.secrets['API_KEY'])
-client = OpenAI(api_key=st.secrets['API_KEY'])
+# print(st.secrets.secrets['API_KEY'])
+# st.write(st.secrets.secrets['API_KEY'])
+client = OpenAI(api_key=st.secrets.secrets['API_KEY'])
 
 nltk.download('stopwords')
 nltk.download('punkt')

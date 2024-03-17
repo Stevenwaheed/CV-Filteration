@@ -28,9 +28,6 @@ import os
 
 # txt2speech = TextToSpeech()
 
-# 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
-# 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
-
 client = OpenAI(api_key=st.secrets.secrets['API_KEY'])
 
 nltk.download('stopwords')
